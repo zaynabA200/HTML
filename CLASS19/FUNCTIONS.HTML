@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <h1>function</h1>
+        <div id = "div1">
+            <br>
+            <button onclick="multiply(5);">click here</button>
+            <div id = "content"></div>
+        </div>
+        <script>
+            function multiply(x,y){
+                if (y == undefined){
+                    y= 2
+                }
+                document.getElementById("content").innerHTML = "The answer is "+ (x*y)
+            }
+        </script>
+    </body>
+</html>

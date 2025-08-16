@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Function</title>
+    </head>
+    <body>
+        <h1>Scope of variable</h1>
+        <div id = "div1">
+             <button onclick="myfunction();">click here</button>
+            <div id = "content"></div>
+            <div id = "result"></div>
+            <div id = "result1"></div>
+            </div>
+            <script>
+                var x = 10
+                function myfunction(){
+                    var y = 300
+                   document.getElementById("content").innerHTML = "the addition of x and y is "+(x+y)
+                }
+                document.getElementById("result").innerHTML = "the x value is" + x
+                document.getElementById("result1").innerHTML = "the y value is" + y
+            </script>
+        </body>
+
+   
+</html>
