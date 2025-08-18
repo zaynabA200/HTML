@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Switch</title>
+    </head>
+    <body>
+        <h1>Today's day is Switch</h1>
+        <div id = "res"></div>
+        <script>
+            var dt = new Date ()
+            var d = dt.getDay()
+                var str1
+                document.write(d)
+                switch (d)
+            {
+                case 0 : 
+                str1 = "sunday"
+                   break
+                case 1 :
+                str1 = "monday"
+                   break
+                case 2 :
+                str1 = "tuesday"
+                   break
+                   case 3 :
+                str1 = "wednesday"
+                   break
+                   case 4 :
+                str1 = "thursday"
+                   break
+                   case 5 :
+                str1 = "friday"
+                   break
+                   case 6 :
+                str1 = "saturday"
+                   break
+            }
+            document.getElementById("res").innerHTML = "today's is  " + str1
+        </script>
+    </body>
+</html>

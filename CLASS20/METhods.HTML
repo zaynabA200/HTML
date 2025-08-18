@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <title>Methods</title>
+    </head>
+  <body>
+    <h1>Methods</h1>
+    <div id = "res"></div>
+    <div id = "res1"></div>
+    <div id = "res2"></div>
+    <div id = "res3"></div>
+    <script>
+        var str1 = "codingal"
+        document.getElementById("res").innerHTML = "the upper case of the string is"+ str1.toUpperCase()
+    document.getElementById("res1").innerHTML = "the lower case of the string is"+ str1.toLowerCase()
+   document.getElementById("res2").innerHTML = "the string starts with A or not "+ str1.startsWith("a")
+  var rg = new RegExp ("like")
+  var str2 = "I like coding"
+  var res = rg.test(str2)
+   document.getElementById("res3").innerHTML = "the string found is" + res
+  </script>
+  </body>
+</html>
