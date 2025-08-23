@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arguments</title>
+        <style>
+            body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:tomato;
+                font-size : 40px;
+                
+            }
+            #res{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: pink;
+                padding:10px;
+                border:5px solid tomato;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Arguments</h1>
+        <div id = "res"></div>
+        <script>
+            function findmax(){
+                var max = 0
+                for (var i =0; i<arguments .length;i++)
+            {
+                if (arguments[i]>max){
+                    max = arguments[i]
+                }
+            }
+            return max
+            }
+            document.getElementById("res").innerHTML= "the maximum is " +findmax(12,1,45,67,89,144)
+        </script>
+    </body>
+</html>
