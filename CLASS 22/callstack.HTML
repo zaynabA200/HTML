@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Call stack
+        </title>
+    </head>
+    <style>
+            body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:tomato;
+                font-size : 40px;
+                
+            }
+            #res{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: pink;
+                padding:10px;
+                border:5px solid tomato;
+                border-radius: 20px;
+            }
+        </style>
+        <body>
+            <h1>Call stack</h1>
+            <div id ="res"></div>
+            <script>
+                function add (a,b){
+                    return a+b
+                }
+                function avg (a,b){
+                    return add (a,b)/2
+                }
+                document.getElementById("res").innerHTML="the average of 23 + 45 is:"+avg(23,45)
+            </script>
+        </body>
+</html>
