@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Real time validation
+        </title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h1>Real time validation</h1>
+        <hr>
+        <fieldset>
+            <form name ="myform" onsubmit="validate(event);">
+                Name : <input type = "text" id = "name">
+                <br><br>
+                 Email : <input type = "email" id = "email">
+                <br><br>
+                 age : <input type = "number" id = "age">
+                <br><br>
+                <input type = "submit" value = "login">
+            </form>
+            <div id = "res"></div>
+            <script>
+               function validate (e)
+               {
+                e.preventDefault()
+               var name1 = document.getElementById("name").value
+               var email1 = document.getElementById("email").value
+               var age1 = document.getElementById("age").value
+               var msg = document.getElementById("res")
+               var message
+               if(name1 == ""){
+                message="please fill the name"
+                msg.style.color='red'
+               }
+              else if(email1 == ""){
+                message="please fill the email"
+                msg.style.color='red'
+               }
+              else if(age1 == ""){
+                message="please fill the age"
+                msg.style.color='red'
+               }
+               else{
+                message="Login successful"
+                msg.style.color='green'
+               }
+               msg.innerText=message
+               }
+            </script>
+        </fieldset>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dom
+        </title>
+    </head>
+    <style>
+            body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:maroon;
+                font-size : 40px;
+                
+            }
+            div{
+                color:black;
+                font-size:medium;
+            }
+            #res{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: rosybrown;
+                padding:10px;
+                border:5px solid crimson;
+                border-radius: 20px;
+            }
+        </style>
+        <body>
+            <h1 id ="myhead">Welcome to DOM</h1>
+            <p>DOM is  document object model which is a programming interface created by the browser</p>
+        <script>
+            var msg = document.getElementById("myhead").innerHTML
+            alert(msg)
+        </script>
+        </body>
+</html>
