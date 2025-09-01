@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While loop</title>
+    </head>
+     <style>
+            body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:tomato;
+                font-size : 40px;
+                
+            }
+            #res{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: pink;
+                padding:10px;
+                border:5px solid tomato;
+                border-radius: 20px;
+            }
+            button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }
+        </style>
+        <body>
+            <h1>While loops</h1>
+            <button onclick ="generate();">Generate</button>
+            <br>
+            <br>
+            <div id = "result"></div>
+            <script>
+                function generate()
+                {
+                    var i =0
+                    var res = ''
+                    while (i<10){
+                        res = res +i+"<br>"
+                        i+=1
+                    }
+                    document.getElementById("result").innerHTML=res
+                }
+            </script>
+        </body>
+</html>
