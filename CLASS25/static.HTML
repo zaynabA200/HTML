@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Static methods</title>
+    </head>
+    <body>
+        <h1>Static Methods</h1>
+        <div id = "res"></div>
+        <div id = "res1"></div>
+        <script>
+            class student
+            {
+                hi()
+                {
+                    document.write("hi I am a student")
+                }
+                static hello (){
+                    document.write("I am a static method")
+                }
+                callstatic(){
+                   student.hello()
+                }
+
+            }
+            s1 = new student()
+            s1.hi()
+            //s1.hello()
+            s1.callstatic()
+        </script>
+    </body>
+</html>

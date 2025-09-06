@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript objects</title>
+    </head>
+    <style>
+    body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:maroon;
+                font-size : 40px;
+                
+            }
+            p{
+                color:gold;
+                font-size:medium;
+            }
+            #res,#res1,#res2,#res3{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: rosybrown;
+                padding:10px;
+                border:5px solid crimson;
+                border-radius: 20px;
+            }
+           
+    </style>
+    <body>
+        <h1>Javascript Objects</h1>
+        <div id = "res"></div>
+         <div id = "res1"></div>
+         <script>
+            class student {
+                constructor (name,byear){
+                    this.name = name;
+                    this.byear=byear;
+                }
+                age(){
+                    var dt = new Date()
+                    var yy = dt.getFullYear()
+                        var myage = yy - this.byear
+                    document.getElementById("res").innerHTML= "I am"+this.name
+                     document.getElementById("res1").innerHTML= "my age is"+myage
+                }
+            }
+            student1=new student("Maryam",2010)
+            student1.age()
+         </script>
+    </body>
+</html>

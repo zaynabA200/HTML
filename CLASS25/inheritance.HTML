@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inheritance</title>
+    </head>
+    <body>
+        <h1>Inheritance</h1>
+        <div id ="res"></div>
+        <div id ="res1"></div>
+        <script>
+            class car {
+                constructor(brand){
+                    this.brand = brand
+                }
+                display(){
+                    document.getElementById("res").innerHTML="my brand is"+this.brand
+                }
+            }
+            class model extends car{
+                constructor(brand,mname){
+                    super(brand)
+                    this.mname=mname}
+                    
+                    display1(){
+                        this.display()
+                         document.getElementById("res1").innerHTML="my model is "+this.mname
+                    }
+                }
+            
+            m1 = new model (" benz",  2023)
+            m1.display1()
+        </script>
+    </body>
+</html>
