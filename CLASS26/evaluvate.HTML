@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Evaluvate</title>
+    </head>
+    <style>
+    body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:maroon;
+                font-size : 40px;
+                
+            }
+            p{
+                color:gold;
+                font-size:medium;
+            }
+            #res,#res1,#res2,#res3{
+                display:inline-block;
+                width:300px;
+                height:60px;
+                text-align: center;
+                background-color: rosybrown;
+                padding:10px;
+                border:5px solid crimson;
+                border-radius: 20px;
+                color:gold;
+            }
+             button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }
+    </style>
+    <body>
+        <h1>Eval function</h1>
+        <button onclick ="evaluate1()">Click me</button>
+        <br>
+        <div id ="res"></div>
+        <div id ="res1"></div>
+        <div id ="res2"></div>
+        <script>
+            var x = 10;
+            var y =7;
+            document.getElementById("res").innerHTML= "x="+x
+            document.getElementById("res1").innerHTML= "y="+y
+            function evaluate1(){
+        var res = eval ("x+y-3*10")
+         document.getElementById("res2").innerHTML= "x+y-3*10="+res
+            }
+        </script>
+    </body>
+</html>

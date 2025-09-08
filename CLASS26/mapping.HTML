@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array sorting</title>
+    </head>
+    <style>
+    body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:maroon;
+                font-size : 40px;
+                
+            }
+            p{
+                color:gold;
+                font-size:medium;
+            }
+            #res,#res1,#res2,#res3{
+                display:inline-block;
+                width:300px;
+                height:60px;
+                text-align: center;
+                background-color: rosybrown;
+                padding:10px;
+                border:5px solid crimson;
+                border-radius: 20px;
+                color:gold;
+            }
+             button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }
+    </style>
+    <body>
+        <h1>Array mapping</h1>
+        
+        <div id = "res"></div>
+        <div id = "res1"></div>
+        <script>
+            var points = [12,45,23,89,456,121,23,2]
+            document.getElementById("res").innerHTML = points
+            function mul(a){
+                return a*10
+            }
+            var newarray=points.map(mul)
+                 document.getElementById("res1").innerHTML = newarray
+            
+        </script>
+    </body>
+</html>
