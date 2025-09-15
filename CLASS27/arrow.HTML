@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Arrow function
+        </title>
+    </head>
+    <style>
+    body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:maroon;
+                font-size : 40px;
+                
+            }
+            p{
+                color:gold;
+                font-size:medium;
+            }
+            #res,#res1,#res2,#res3{
+                display:inline-block;
+                width:300px;
+                height:60px;
+                text-align: center;
+                background-color: rosybrown;
+                padding:10px;
+                border:5px solid crimson;
+                border-radius: 20px;
+                color:gold;
+            }
+             button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }
+    </style>
+    <body>
+         <h1 class="disp">Arrow Function</h1>
+        <div id = "res"></div>
+         <script>
+           multiply = (a,b,c)=>a*b*c
+           document.getElementById("res").innerHTML="The result is"+multiply (12,3,4)
+         </script>
+    </body>
+</html>
