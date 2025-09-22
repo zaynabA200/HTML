@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Check Valididty
+        </title>
+    </head>
+    <style>
+            body{
+                background-color: aliceblue;
+               text-align: center;
+            }
+            h1{
+                color:tomato;
+                font-size : 40px;
+                
+            }
+            #res{
+                display:inline-block;
+                width:200px;
+                height:60px;
+                text-align: center;
+                background-color: pink;
+                padding:10px;
+                border:5px solid tomato;
+                border-radius: 20px;
+            }
+            button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }
+        </style>
+    <body>
+        <input type="number" name="age" id="id1" required min =20 max=50>
+    <button onclick="valid()">Validate</button>
+    <p id ="res"></p>
+    <script>
+        function valid(){
+            var x =document.getElementById("id1")
+            if (!x.checkValidity()){
+          document.getElementById("res").innerHTML=x.validationMessage
+            }
+            else{
+                document.getElementById("res").innerHTML="input ok"
+            }
+        }
+    </script>
+    </body>
+</html>
