@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript Apps
+        </title>
+    </head>
+    <style>
+        body{
+            background-color: bisque;
+            text-align: center;
+        }
+        h1{
+            color: brown;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #res{
+            width: 100%;
+            background-color: pink;
+            border: 6px solid tomato;
+            padding: 12px;
+        }
+        
+    </style>
+    <body>
+        <h1>Palidrome App</h1>
+        <div id="res"></div>
+        <script>
+            function palidrome(str1){
+                var input=str1.replace(/[^A-Z0-9]/ig,"").toLowerCase()
+                var revinput = input.split("").reverse().join("")
+               
+            if(input == revinput){
+            
+                document.getElementById("res").innerHTML="The "+str1+" is a palidrome"
+            }
+            else{
+                 document.getElementById("res").innerHTML="The "+str1+" is not a palidrome"
+            }
+           
+            }
+            palidrome("her")
+        </script>
+    </body>
+</html>
