@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <title>Change Background</title>
+    <head>
+        <style>
+           button{
+                width : 115px;
+                height: 50px;
+                background-color: pink;
+                color: antiquewhite;
+            }
+            button:hover{
+                background-color: maroon;
+            }  
+        </style>
+        <body>
+            <button onClick ="getRandomColor();">Change Background</button>
+        <script>
+function getRandomColor(){
+    var letters ='0123456789ABCDEF';
+    var color='#';
+for (var i=0; i < 6;i++){
+    color+= letters[Math.floor(Math.random()*16)];
+}
+document.body.style.backgroundColor=color
+        }
+        </script>
+        </body>
+    </head>
+</html>
