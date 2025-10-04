@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Todo list
+        </title>
+    </head>
+    <style>
+        #myform{
+            top:22%;
+            background-color:blanchedalmond;
+            width: 400px;
+            height: 200px;
+            padding: 40px;
+            border: 20px solid maroon;
+        }
+        #myitem{
+position: fixed;
+top: 60%;
+left: 30%;
+background-color: brown;
+ padding : 30%;
+ border:25% solid crimson;
+        }
+    </style>
+    <body>
+        <h1>Todo List</h1>
+        <form id="myform">
+            <input type ="text" id="myinput">
+            <button>Add</button>
+        </form>
+        <h3>To Do List</h3>
+        <ul id="myitem"></ul>
+        <script>
+            var myform=document.getElementById("myform")
+            var myinput=document.getElementById("myinput")
+              var myitem=document.getElementById("myitem")
+              myform.addEventListener("submit",function(event){
+                event.preventDefault()
+                createitem(myinput.value)
+              });
+              function createitem(inputitems)
+              {
+                var items=`<li> ${inputitems}<button onclick ='deleteitem(this)'> delete</button></li>`
+             myitem.insertAdjacentHTML("beforeend",items)
+             myitem.value=" "
+             myinput.focus()
+                }
+                function deleteitem(x){
+                    x.parentElement.remove()
+                }
+        </script>
+    </body>
+</html>
