@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+         stopwatch
+        </title>
+    </head>
+    <body>
+        <div id ="disp">
+            <span id = "seconds">00</span><span>:<span id ="millisonds"></span>00</span>
+            <br>
+            <button id="start">start</button>
+            <button id="stop">stop</button>
+            <button id="reset">reset</button>
+        </div>
+        <script>
+            window.onload = function()
+            {
+              
+                var sec=00
+                var msec=00
+                var appsec=document.getElementById("seconds")
+                 var appmsec=document.getElementById("milliseconds")
+                  var sbutton=document.getElementById("start")
+                   var  spbutton=document.getElementById("stop")
+                    var  rbutton=document.getElementById("reset")
+                 var interval;
+                 sbutton.onclick=function()
+                 {
+                    document.write("hello")
+                    clearInterval(interval);
+                    interval=setInterval(startimer,10)
+                 }
+                 sbutton.onclick=function()
+                 {
+                    clearInterval(interval);
+                   
+                 }
+                 rbutton.onclick=function()
+                 {
+                    clearInterval(interval);
+                    sec= 0
+                    msec =0
+                    appsec.innerHTML="00"
+                    appmsec.innerHTML="00"
+                 }
+                 function startimer(){
+                msec++;
+                if (msec<9){
+                    appmsec.innerHTML="0"+msec
+                }
+                 if (msec>9){
+                    appmsec.innerHTML=msec
+                }
+            if (msec>99)
+            {
+                sec++
+                    appmsec.innerHTML="0"+sec
+                    msec=0
+                    appmsec.innerHTML=msec
+            } 
+            if (sec>9){
+                    appsec.innerHTML=sec
+                }
+            }
+        }
+        </script>
+    </body>
+</html>
