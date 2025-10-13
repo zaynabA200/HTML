@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript  Apps
+
+        </title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+        #mydice{
+            font-size: 420px;
+            color: brown;
+        }
+        #mydice:hover{
+            cursor:pointer;
+        }
+    </style>
+    <body>
+        <div id ="mydice" onclick="startstop()"></div>
+    <script>
+        var dices=["&#9856","&#9857","&#9858","&#9859","&#9860","&#9861"]
+    var dice
+    var stop=true
+    var interval
+    function change(){
+    var r= Math.floor(Math.random()*100)
+    dice.innerHTML=r
+    }
+    function startstop(){
+        if(stop){
+            interval=setInterval(change,100)
+            stop=false
+        }
+        else{
+            clearInterval(interval)
+            stop=true;
+        }
+    }
+window.onload=function(){
+    dice=document.getElementById("mydice")
+    mydice.innerHTML=dices[0]
+    startstop()
+}
+
+    </script>
+    
+    
+    
+    
+    </body>
+
+</html>
