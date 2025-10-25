@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <style>
+        body{
+            margin: 0px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: blanchedalmond;
+        }
+        .topnav{
+            overflow:hidden;
+            background-color:gray;
+        }
+    .topnav a{
+        float:right;
+        color:maroon;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration:none;
+        font-size: 17px;
+    }
+    .topnav a:hover{
+        color:chocolate;
+        font-size: 19px;
+    }
+.topnav a.active{
+    background-color:burlywood;
+    color:maroon;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+.carousel.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+.myslides{
+    display: none;
+    max-height: 100%;
+    max-width: 100%;
+}
+    </style>
+    <body>
+        <div class="topnav">
+            <a href ="index.html"class="active">Home</a>
+              <a href ="about.html">About us</a>
+                <a href ="contact.html">Conatact</a>
+                  <a href ="index.html">Gallery</a>
+        </div>
+        <h1>My Favourite Places</h1>
+        <div class ="carousel conatiner">
+            <img class="myslides" src ="pic1.jpeg" width ="100%" height="100%" border =3 alt="picture1">
+          <img class="myslides" src ="pic2.jpeg" width ="100%" height="100%" border =3 alt="picture1">
+         <img class="myslides" src ="pic3.jpeg" width ="100%" height="100%" border =3 alt="picture1">
+        </div>
+        <script>
+            var index=0
+            function carousel(){
+                var i;
+                var x =document.getElementsByClassName("myslides")
+                for(i=0;i<x.length;i++)
+            {
+                x[i].style.display="none"
+            }
+            index++
+            if(index>x.length){
+                index=1
+            }
+            x[index-1].style.display="block"
+            setTimeout(carousel,2000)
+            }
+            carousel()
+        </script>
+       
+    </body>
+</html>
