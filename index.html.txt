@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jammu & Kashmir Shia Association | Unity, Education, Service</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Import: Inter (Tailwind default) and fallback */
+        html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+
+        /* Custom Colors for the Green & Gold Theme */
+        .bg-primary-green { background-color: #0A6640; /* Deep Forest Green */ }
+        .text-primary-green { color: #0A6640; }
+        .bg-secondary-gold { background-color: #FFC300; /* Bright Gold */ }
+        .text-secondary-gold { color: #FFC300; }
+        .text-light-gold { color: #FFD700; } /* Light Gold for accents */
+
+        /* Smooth Transition for all elements */
+        * { transition: all 0.3s ease-in-out; }
+
+        /* Custom Scrollbar for a cleaner look (optional, modern browsers only) */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-thumb { background: #FFC300; border-radius: 4px; }
+        ::-webkit-scrollbar-track { background: #E5E7EB; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 shadow-lg bg-primary-green text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo/Association Name -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="flex items-center space-x-2">
+                        <i data-lucide="mosque" class="w-8 h-8 text-secondary-gold"></i>
+                        <span class="text-2xl font-extrabold tracking-tight text-light-gold">J&K Shia Association</span>
+                    </a>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex lg:space-x-8 text-lg font-medium">
+                    <a href="#home" class="hover:text-secondary-gold py-2 px-3 rounded-lg">Home</a>
+                    <a href="#about" class="hover:text-secondary-gold py-2 px-3 rounded-lg">About Us</a>
+                    <a href="#services" class="hover:text-secondary-gold py-2 px-3 rounded-lg">Services</a>
+                    <a href="#events" class="hover:text-secondary-gold py-2 px-3 rounded-lg">Events</a>
+                    <a href="#contact" class="hover:text-secondary-gold py-2 px-3 rounded-lg">Contact</a>
+                    <a href="#donate" class="bg-secondary-gold text-primary-green hover:bg-light-gold px-4 py-2 rounded-full shadow-md font-bold transition duration-300">
+                        Donate
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg text-secondary-gold hover:bg-green-700 focus:outline-none" aria-label="Toggle menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="lg:hidden hidden border-t border-green-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-green-700 hover:text-secondary-gold">Home</a>
+                <a href="#about" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-green-700 hover:text-secondary-gold">About Us</a>
+                <a href="#services" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-green-700 hover:text-secondary-gold">Services</a>
+                <a href="#events" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-green-700 hover:text-secondary-gold">Events</a>
+                <a href="#contact" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-green-700 hover:text-secondary-gold">Contact</a>
+                <a href="#donate" class="block text-center mt-4 bg-secondary-gold text-primary-green hover:bg-light-gold px-4 py-2 rounded-full font-bold transition duration-300">
+                    Donate Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="home" class="relative bg-primary-green text-white py-20 lg:py-32 overflow-hidden">
+            <!-- Background pattern for visual richness -->
+            <div class="absolute inset-0 opacity-10 bg-repeat" style="background-image: url('https://placehold.co/100x100/ffffff/0A6640?text=Pattern'); background-size: 100px;"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
+                    <div class="lg:col-span-7">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                            <span class="block">Unity. Education. Service.</span>
+                            <span class="block text-secondary-gold mt-2">The Heart of the J&K Shia Community.</span>
+                        </h1>
+                        <p class="mt-4 text-xl text-green-200 max-w-lg">
+                            Serving the community of Jammu & Kashmir by upholding Islamic values, preserving cultural heritage, and promoting interfaith harmony.
+                        </p>
+                        <div class="mt-8 space-y-3 sm:space-y-0 sm:flex sm:space-x-4">
+                            <a href="#events" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 border border-transparent text-lg font-medium rounded-full shadow-lg text-primary-green bg-secondary-gold hover:bg-light-gold transition duration-300 transform hover:scale-105">
+                                View Upcoming Events
+                                <i data-lucide="calendar-check" class="w-5 h-5 ml-2"></i>
+                            </a>
+                            <a href="#about" class="w-full sm:w-auto inline-flex justify-center items-center px-8 py-3 border-2 border-green-200 text-lg font-medium rounded-full text-green-200 hover:bg-green-700 transition duration-300">
+                                Learn Our Mission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 mt-10 lg:mt-0">
+                        <!-- Placeholder Image related to Kashmir/Shrine -->
+                        <img src="https://placehold.co/600x400/0E7C57/F0FDF4?text=J%26K+Community+Center"
+                             alt="Community gathering placeholder"
+                             class="rounded-xl shadow-2xl w-full object-cover border-4 border-secondary-gold transform rotate-1 transition duration-500 hover:rotate-0">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. About Us Section -->
+        <section id="about" class="py-16 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-semibold uppercase tracking-wider text-secondary-gold">Who We Are</h2>
+                    <p class="mt-2 text-4xl font-extrabold text-primary-green sm:text-5xl">Our Mission & Vision</p>
+                </div>
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12 space-y-8 lg:space-y-0">
+                    <!-- Card 1: Community -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-5px]">
+                        <i data-lucide="users" class="w-10 h-10 text-secondary-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold text-primary-green mb-2">Community Welfare</h3>
+                        <p class="text-gray-600">
+                            Fostering a strong, supportive community network through charity, social services, and mutual aid programs for the needy families of J&K.
+                        </p>
+                    </div>
+                    <!-- Card 2: Education -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-5px]">
+                        <i data-lucide="book-open-text" class="w-10 h-10 text-secondary-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold text-primary-green mb-2">Religious Education</h3>
+                        <p class="text-gray-600">
+                            Providing authentic Islamic teachings, Quranic studies, and ethical guidance to children, youth, and adults in our region.
+                        </p>
+                    </div>
+                    <!-- Card 3: Harmony -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:translate-y-[-5px]">
+                        <i data-lucide="handshake" class="w-10 h-10 text-secondary-gold mb-3"></i>
+                        <h3 class="text-2xl font-bold text-primary-green mb-2">Interfaith Dialogue</h3>
+                        <p class="text-gray-600">
+                            Dedicated to promoting peace, tolerance, and understanding between different communities and faiths across Jammu and Kashmir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Services Section -->
+        <section id="services" class="py-16 lg:py-24 bg-green-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-semibold uppercase tracking-wider text-secondary-gold">What We Offer</h2>
+                    <p class="mt-2 text-4xl font-extrabold text-primary-green sm:text-5xl">Our Core Programs</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service 1: Friday Prayers -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="clock" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Jumu'ah & Daily Prayers</h4>
+                        <p class="text-gray-600">
+                            Organizing daily congregational prayers and the essential Friday Jumu'ah prayer with sermons focusing on contemporary issues.
+                        </p>
+                    </div>
+                    <!-- Service 2: Youth Programs -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="rocket" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Youth Empowerment</h4>
+                        <p class="text-gray-600">
+                            Workshops, mentorship, and recreational activities designed to empower young community members with skills and Islamic ethics.
+                        </p>
+                    </div>
+                    <!-- Service 3: Nikah Services -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="heart" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Marriage & Counseling</h4>
+                        <p class="text-gray-600">
+                            Facilitation of Nikah ceremonies and providing marriage, family, and personal counseling services based on Islamic principles.
+                        </p>
+                    </div>
+                    <!-- Service 4: Library -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="library" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Islamic Library & Research</h4>
+                        <p class="text-gray-600">
+                            A growing collection of Islamic texts, research materials, and historical documents related to Shia heritage in J&K.
+                        </p>
+                    </div>
+                    <!-- Service 5: Relief Efforts -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="hand-heart" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Disaster & Poverty Relief</h4>
+                        <p class="text-gray-600">
+                            Active involvement in local disaster relief and continuous programs to alleviate poverty and provide basic necessities.
+                        </p>
+                    </div>
+                    <!-- Service 6: Hauza Classes -->
+                    <div class="bg-white rounded-xl shadow-xl p-8 border-t-4 border-secondary-gold">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-primary-green mb-3"></i>
+                        <h4 class="text-xl font-bold text-primary-green mb-3">Hauza and Madrassa Classes</h4>
+                        <p class="text-gray-600">
+                            Structured Islamic seminary classes for advanced students dedicated to theological and jurisprudential studies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Events / News Section -->
+        <section id="events" class="py-16 lg:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-xs font-semibold uppercase tracking-wider text-primary-green">Stay Connected</h2>
+                    <p class="mt-2 text-4xl font-extrabold text-secondary-gold sm:text-5xl">Upcoming Events</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Event 1: Muharram Schedule -->
+                    <div class="flex flex-col bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase rounded-full bg-red-600 text-white mb-2">Major Event</span>
+                            <h3 class="text-2xl font-bold text-primary-green mb-2">Annual Muharram Majalis</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex items-center">
+                                <i data-lucide="clock-2" class="w-4 h-4 mr-1"></i> Starting: 1st of Muharram, Daily after Maghrib
+                            </p>
+                            <p class="text-gray-700">
+                                Join us for the ten nights of remembrance, sermons, and mourning ceremonies for Imam Hussain (AS). All are welcome.
+                            </p>
+                        </div>
+                        <a href="#" class="mt-auto bg-primary-green text-light-gold text-center py-3 font-semibold hover:bg-green-900">
+                            Full Schedule Details
+                        </a>
+                    </div>
+
+                    <!-- Event 2: Weekly Classes -->
+                    <div class="flex flex-col bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase rounded-full bg-secondary-gold text-primary-green mb-2">Classes</span>
+                            <h3 class="text-2xl font-bold text-primary-green mb-2">Weekly Fiqh Class (Men & Women)</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex items-center">
+                                <i data-lucide="clock-2" class="w-4 h-4 mr-1"></i> Every Saturday, 11:00 AM - 1:00 PM
+                            </p>
+                            <p class="text-gray-700">
+                                A comprehensive look at practical Islamic law and jurisprudence led by respected local scholars.
+                            </p>
+                        </div>
+                        <a href="#" class="mt-auto bg-primary-green text-light-gold text-center py-3 font-semibold hover:bg-green-900">
+                            Register Now
+                        </a>
+                    </div>
+
+                    <!-- Event 3: Free Medical Camp -->
+                    <div class="flex flex-col bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-semibold uppercase rounded-full bg-blue-500 text-white mb-2">Welfare</span>
+                            <h3 class="text-2xl font-bold text-primary-green mb-2">Annual Free Medical Camp</h3>
+                            <p class="text-sm text-gray-500 mb-4 flex items-center">
+                                <i data-lucide="clock-2" class="w-4 h-4 mr-1"></i> Date: Sunday, 15th December
+                            </p>
+                            <p class="text-gray-700">
+                                Providing free general check-ups, eye care, and basic medication to those in need across Srinagar.
+                            </p>
+                        </div>
+                        <a href="#" class="mt-auto bg-primary-green text-light-gold text-center py-3 font-semibold hover:bg-green-900">
+                            Volunteer or Attend
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Call to Action/Donate Section -->
+        <section id="donate" class="bg-secondary-gold py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-4xl sm:text-5xl font-extrabold text-primary-green mb-4">
+                    Support Our Mission
+                </p>
+                <p class="text-xl text-green-900 mb-8 max-w-3xl mx-auto">
+                    Every contribution stays within J&K to fund our educational programs, welfare services, and community maintenance. Your generosity makes a difference.
+                </p>
+                <a href="#" class="inline-flex items-center px-10 py-4 border border-transparent text-xl font-bold rounded-full shadow-2xl text-white bg-primary-green hover:bg-green-900 transition duration-300 transform hover:scale-105">
+                    Donate Securely Now
+                    <i data-lucide="hand-heart" class="w-6 h-6 ml-3"></i>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-primary-green text-green-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-green-700 pb-8 mb-8">
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="text-xl font-bold text-light-gold mb-4">Contact</h5>
+                    <p class="mb-2"><strong>Address:</strong> Model Town, Srinagar, J&K - 190001</p>
+                    <p class="mb-2"><strong>Email:</strong> info@jksia.org</p>
+                    <p class="mb-2"><strong>Phone:</strong> +91 98765 43210</p>
+                </div>
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-xl font-bold text-light-gold mb-4">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-secondary-gold">About Us</a></li>
+                        <li><a href="#events" class="hover:text-secondary-gold">Upcoming Events</a></li>
+                        <li><a href="#" class="hover:text-secondary-gold">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <!-- Follow Us -->
+                <div>
+                    <h5 class="text-xl font-bold text-light-gold mb-4">Follow Us</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="hover:text-secondary-gold"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Twitter" class="hover:text-secondary-gold"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Instagram" class="hover:text-secondary-gold"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+                <!-- Mission Statement -->
+                <div class="col-span-2 md:col-span-1">
+                    <h5 class="text-xl font-bold text-light-gold mb-4">J&K SIA</h5>
+                    <p class="text-sm">
+                        Dedicated to serving the spiritual, educational, and social needs of the J&K Shia community with transparency and compassion.
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center text-sm text-green-400 pt-4">
+                &copy; <span id="year"></span> Jammu & Kashmir Shia Association. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Footer Year -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const icon = menuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.setAttribute('data-lucide', 'menu');
+                } else {
+                    icon.setAttribute('data-lucide', 'x');
+                }
+                lucide.createIcons(); // Re-render icon on toggle
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuButton.querySelector('i').setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                });
+            });
+
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
+
